@@ -1,17 +1,5 @@
 <h1>Edit article</h1>
 
-<%= form_for @article do |f| %>
-	<p>
-		<%=f.label :title%>
-		<%=f.text_field :title %>
-	</p>
-	<p>
-		<%=f.label :description%>
-		<%=f.text_area :description %>
-	</p>
-
-	<%= f.submit %>
-
-<% end %>
+<%= render 'form' %>
 
 	<%= link_to "cancel", article_path(@article.id)%>
