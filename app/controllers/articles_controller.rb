@@ -1,7 +1,8 @@
 class ArticlesController < ApplicationController
-	
+
 	# for all actions mentioned, call set_article
 	before_action :set_article, only: [:edit, :update, :show, :destroy]
+
 	def new
 		@article = Article.new
 	end
@@ -18,25 +19,18 @@ class ArticlesController < ApplicationController
 	end
 
 	def show
-
-
 	end
 
 	def edit
-
-		# redirect_to edit_article_path(@article)
 	end
 
 	def update
-
-
 		if @article.update(article_params)
 			flash[:notice] = "Article was successfully updated."
 			redirect_to article_path(@article)
 		else
 			render 'edit'
 		end
-
 	end
 
 	def index
@@ -44,7 +38,6 @@ class ArticlesController < ApplicationController
 	end
 
 	def destroy
-
 		@article.destroy
 		flash[:notice] = "Article was successfully deleted"
 		redirect_to articles_path
