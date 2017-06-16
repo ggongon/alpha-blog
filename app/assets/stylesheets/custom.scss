@@ -1,2 +1,22 @@
+$navbar-default-bg: darkblue;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#logo {text-transform: uppercase;
+color: white}
+
+.center {
+	text-align: center;
+
+}
+.jumbotron {
+	width:90%;
+	background: lightgray;
+	margin: auto
+}
+
+.footer {
+	margin-top:20px;
+	border-top: 1px solid lightgray;
+}
